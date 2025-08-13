@@ -1,0 +1,122 @@
+:root{
+  --bg: #0b0c10;
+  --panel: #121318;
+  --text: #e6e6e6;
+  --muted: #b0b3b8;
+  --brand: #6ee7b7;
+  --brand-ink: #0a3b2a;
+  --border: #1f2330;
+  --pill: #202534;
+  --focus: #8ab4f8;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img{max-width:100%;display:block}
+
+.wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 1rem;
+}
+
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{
+  position: static;
+  width: auto; height: auto; padding: .5rem 1rem;
+  background: var(--brand); color: var(--brand-ink);
+  border-radius: .5rem;
+}
+
+.site-header{
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(11,12,16,.75);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.site-header .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  padding: .9rem 1rem;
+}
+.brand{display:flex;align-items:center;gap:.75rem}
+.logo{
+  width:36px;height:36px;border-radius:10px;
+  display:grid;place-items:center;font-weight:700;
+  background: linear-gradient(135deg, var(--brand), #a7f3d0);
+  color: var(--brand-ink);
+}
+.title h1{font-size:1.1rem;margin:0}
+.title .tagline{margin:0;color:var(--muted);font-size:.9rem}
+.main-nav a{color:var(--text);text-decoration:none;margin-left:1rem;font-weight:600}
+.main-nav a:hover,.main-nav a:focus{color:var(--brand)}
+
+.hero{
+  padding: 6rem 0 4rem;
+  background: radial-gradient(1200px 400px at 50% -10%, #1a1f2b 0%, transparent 60%);
+}
+.hero h2{font-size: clamp(2rem, 3vw + 1rem, 3rem); margin: 0 0 .5rem}
+.hero p{color: var(--muted); max-width: 60ch}
+.cta-row{display:flex; gap: .75rem; margin-top: 1rem}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--border); background: var(--panel); color: var(--text);
+  padding:.7rem 1rem;border-radius:.8rem;text-decoration:none;font-weight:600;
+}
+.btn.primary{background: var(--brand); color: var(--brand-ink); border-color: transparent}
+.btn:hover{transform: translateY(-1px)}
+.btn:active{transform: translateY(0)}
+
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap}
+.chip{
+  background: var(--pill); color: var(--text); border:1px solid var(--border);
+  padding:.45rem .75rem; border-radius:999px; cursor:pointer; font-weight:600
+}
+.chip.active,.chip:focus{outline:none; box-shadow: 0 0 0 3px var(--focus)}
+
+.projects{padding: 3rem 0}
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.card{
+  background: var(--panel); border:1px solid var(--border); border-radius:1rem; overflow:hidden
+}
+.card-body{padding:1rem}
+.card h3{margin:.2rem 0 .3rem}
+.card p{margin:0;color:var(--muted)}
+.pill-row{display:flex;gap:.5rem;margin-top:.6rem;flex-wrap:wrap}
+.pill{background: var(--pill); color: var(--text); border:1px solid var(--border); padding:.2rem .5rem; border-radius:.6rem; font-size:.85rem}
+
+.about,.contact{padding:3rem 0}
+.field{display:flex;flex-direction:column;margin-bottom:1rem;gap:.35rem}
+.two-col{display:grid;grid-template-columns:1fr;gap:1rem}
+@media (min-width: 720px){ .two-col{ grid-template-columns: 1fr 1fr } }
+
+input,textarea{
+  background: #0f111a; color: var(--text); border:1px solid var(--border);
+  border-radius:.6rem; padding:.75rem
+}
+input:focus,textarea:focus{outline:none; box-shadow: 0 0 0 3px var(--focus)}
+
+.honeypot{display:none !important}
+.actions{display:flex;align-items:center;gap:1rem}
+.form-status{min-height:1.2rem;color:var(--muted)}
+
+.site-footer{
+  border-top:1px solid var(--border); padding:1.5rem 0; color: var(--muted);
+}
+.site-footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+.site-footer a{color:var(--muted);text-decoration:none}
+.site-footer a:hover{color:var(--text)}

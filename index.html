@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio website with product showcase and contact form." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">★</div>
+        <div class="title">
+          <h1>Your Name</h1>
+          <p class="tagline">Designer • Developer • Builder</p>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <h2>Build things people love.</h2>
+        <p>Add a short one-liner about what you do and the value you create. Swap copy, colors, and images to make it yours.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">See my work</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Projects & Products</h2>
+          <div class="filters" role="tablist" aria-label="Filter projects">
+            <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="chip" data-filter="web" role="tab">Web</button>
+            <button class="chip" data-filter="mobile" role="tab">Mobile</button>
+            <button class="chip" data-filter="hardware" role="tab">Hardware</button>
+          </div>
+        </div>
+
+        <div class="grid" id="projectGrid" aria-live="polite">
+          <!-- Duplicate/modify these cards or generate them dynamically if you prefer -->
+          <article class="card" data-category="web">
+            <img src="images/sample-1.jpg" alt="Screenshot of Project One" />
+            <div class="card-body">
+              <h3>Project One</h3>
+              <p>Short description of what this solves and what you built.</p>
+              <div class="pill-row">
+                <span class="pill">Web</span>
+                <span class="pill">React</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="mobile">
+            <img src="images/sample-2.jpg" alt="Screenshot of Mobile App" />
+            <div class="card-body">
+              <h3>Mobile App</h3>
+              <p>A crisp summary that highlights results, not just features.</p>
+              <div class="pill-row">
+                <span class="pill">Mobile</span>
+                <span class="pill">Flutter</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="hardware">
+            <img src="images/sample-3.jpg" alt="Photo of hardware prototype" />
+            <div class="card-body">
+              <h3>Hardware Prototype</h3>
+              <p>Describe the problem, approach, and your role. Keep it concise.</p>
+              <div class="pill-row">
+                <span class="pill">Hardware</span>
+                <span class="pill">IoT</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="wrap">
+        <h2>About</h2>
+        <p>Replace this with your bio: your background, what you’re into, and how you like to work.
+        Consider adding a few quantified wins (users reached, revenue, speedups) to make it punchy.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>Drop a line and I’ll get back to you.</p>
+
+        <!--
+          IMPORTANT: Replace YOUR_FORM_ID below with your Formspree form ID.
+          Example: action="https://formspree.io/f/abcde123"
+          Guide: README.md in this repo
+        -->
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="field two-col">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Ada Lovelace" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="_replyto" placeholder="you@example.com" required>
+            </label>
+          </div>
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" rows="6" placeholder="Tell me about your project…" required></textarea>
+          </label>
+
+          <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
+
+          <div class="actions">
+            <button class="btn primary" type="submit">Send message</button>
+            <span class="form-status" id="formStatus" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+        <noscript>
+          <p><em>Note:</em> JavaScript is disabled. The form will still submit via Formspree but without inline status updates.</p>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <div class="social">
+        <!-- Replace with your links -->
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:you@example.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
