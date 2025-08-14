@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Portfolio</title>
+  <title>Antoni Kołaczek — Portfolio</title>
   <meta name="description" content="Portfolio website with product showcase and contact form." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,14 +19,14 @@
       <div class="brand">
         <div class="logo" aria-hidden="true">★</div>
         <div class="title">
-          <h1>Your Name</h1>
-          <p class="tagline">Designer • Developer • Builder</p>
+          <h1>Antoni Kołaczek</h1>
+          <p class="tagline">Fotograf • Filmowiec</p>
         </div>
       </div>
       <nav class="main-nav" aria-label="Primary">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#about">O mnie</a>
+        <a href="#contact">Kontakt</a>
       </nav>
     </div>
   </header>
@@ -46,48 +46,45 @@
     <section id="projects" class="projects">
       <div class="wrap">
         <div class="section-head">
-          <h2>Projects & Products</h2>
-          <div class="filters" role="tablist" aria-label="Filter projects">
-            <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
-            <button class="chip" data-filter="web" role="tab">Web</button>
-            <button class="chip" data-filter="mobile" role="tab">Mobile</button>
-            <button class="chip" data-filter="hardware" role="tab">Hardware</button>
+          <h2>Moje prace</h2>
+          <div class="filters" role="tablist" aria-label="Filtruj portfolio">
+            <button class="chip active" data-filter="all" role="tab" aria-selected="true">Wszytko</button>
+            <button class="chip" data-filter="web" role="tab">Portrety</button>
+            <button class="chip" data-filter="mobile" role="tab">Przyroda</button>
+            <button class="chip" data-filter="hardware" role="tab">Wydarzenia</button>
           </div>
         </div>
 
         <div class="grid" id="projectGrid" aria-live="polite">
           <!-- Duplicate/modify these cards or generate them dynamically if you prefer -->
-          <article class="card" data-category="web">
-            <img src="images/sample-1.jpg" alt="Screenshot of Project One" />
+          <article class="card" data-category="Portrety">
+            <img src="images/sample-1.jpg" alt="Zdjęcie portretowe" />
             <div class="card-body">
-              <h3>Project One</h3>
-              <p>Short description of what this solves and what you built.</p>
+              <h3>Portret</h3>
               <div class="pill-row">
-                <span class="pill">Web</span>
+                <span class="pill">Portret</span>
                 <span class="pill">React</span>
               </div>
             </div>
           </article>
 
-          <article class="card" data-category="mobile">
-            <img src="images/sample-2.jpg" alt="Screenshot of Mobile App" />
+          <article class="card" data-category="Przyroda">
+            <img src="images/sample-2.jpg" alt="Zdjęcie przyrody" />
             <div class="card-body">
               <h3>Mobile App</h3>
-              <p>A crisp summary that highlights results, not just features.</p>
               <div class="pill-row">
-                <span class="pill">Mobile</span>
+                <span class="pill">Przyroda</span>
                 <span class="pill">Flutter</span>
               </div>
             </div>
           </article>
 
-          <article class="card" data-category="hardware">
+          <article class="card" data-category="Wydarzenia">
             <img src="images/sample-3.jpg" alt="Photo of hardware prototype" />
             <div class="card-body">
-              <h3>Hardware Prototype</h3>
-              <p>Describe the problem, approach, and your role. Keep it concise.</p>
+              <h3>Zdjęcia wydarzeń</h3>
               <div class="pill-row">
-                <span class="pill">Hardware</span>
+                <span class="pill">Wydarzenia</span>
                 <span class="pill">IoT</span>
               </div>
             </div>
@@ -98,7 +95,7 @@
 
     <section id="about" class="about">
       <div class="wrap">
-        <h2>About</h2>
+        <h2>O mnie</h2>
         <p>Replace this with your bio: your background, what you’re into, and how you like to work.
         Consider adding a few quantified wins (users reached, revenue, speedups) to make it punchy.</p>
       </div>
@@ -106,8 +103,8 @@
 
     <section id="contact" class="contact">
       <div class="wrap">
-        <h2>Contact</h2>
-        <p>Drop a line and I’ll get back to you.</p>
+        <h2>Kontakt</h2>
+        <p>Napisz do mnie.</p>
 
         <!--
           IMPORTANT: Replace YOUR_FORM_ID below with your Formspree form ID.
@@ -117,23 +114,23 @@
         <form id="contactForm" action="https://formspree.io/f/xeoznwob" method="POST">
           <div class="field two-col">
             <label>
-              <span>Name</span>
-              <input type="text" name="name" placeholder="Ada Lovelace" required>
+              <span>Imię</span>
+              <input type="text" name="name" placeholder="Jan Nowak" required>
             </label>
             <label>
               <span>Email</span>
-              <input type="email" name="_replyto" placeholder="you@example.com" required>
+              <input type="email" name="_replyto" placeholder="ty@przyklad.com" required>
             </label>
           </div>
           <label class="field">
-            <span>Message</span>
-            <textarea name="message" rows="6" placeholder="Tell me about your project…" required></textarea>
+            <span>Wiadomość</span>
+            <textarea name="message" rows="6" placeholder="Tutaj wpisz swoja wiadomość…" required></textarea>
           </label>
 
           <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
 
           <div class="actions">
-            <button class="btn primary" type="submit">Send message</button>
+            <button class="btn primary" type="submit">Wyślij.</button>
             <span class="form-status" id="formStatus" role="status" aria-live="polite"></span>
           </div>
         </form>
@@ -146,12 +143,10 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <p>© <span id="year"></span> Antoni Kołaczek. All rights reserved.</p>
       <div class="social">
         <!-- Replace with your links -->
-        <a href="#" aria-label="GitHub">GitHub</a>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="mailto:you@example.com" aria-label="Email">Email</a>
+        <a href="mailto:antek.kolaczek@gmail.com" aria-label="Email">Email</a>
       </div>
     </div>
   </footer>
